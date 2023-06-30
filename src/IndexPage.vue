@@ -1,3 +1,3 @@
 <template>
-    <a href="/xingying">Xing Ying</a>
+    <router-link to="/xingying">Xing Ying</router-link>
 </template>
