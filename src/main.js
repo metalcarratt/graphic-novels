@@ -19,8 +19,7 @@ const base = process.env.NODE_ENV === 'production'
 console.log(`router base: ${base}`);
 
 const router = createRouter({
-    base,
-    history: createWebHistory(),
+    history: createWebHistory({base}),
     routes
 });
 
