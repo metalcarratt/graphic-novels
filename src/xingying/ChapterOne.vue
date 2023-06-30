@@ -67,5 +67,5 @@
         The dance of the flame left her entranced as she silently gazed at it.
     </p>
     <img src="../assets/images/xingying/ch001/16.jpg" />
-    <a href="">Next Chapter</a>
+    <router-link to="/xingying/ch002">Next Chapter</router-link>
 </template>
