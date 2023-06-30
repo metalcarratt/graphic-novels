@@ -12,8 +12,12 @@ const routes = [
     { path: '/xingying/ch001', component: XYCh1 }
 ];
 
+const base = process.env.NODE_ENV === 'production'
+    ? '/graphic-novels/'
+    : '/'
+
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(base),
     routes
 });
 
