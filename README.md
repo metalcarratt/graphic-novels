@@ -1,5 +1,7 @@
 # graphic-novels
 
+Public URL: https://metalcarratt.github.io/graphic-novels
+
 ## Project setup
 ```
 npm install
