@@ -1,4 +1,4 @@
-# graphic-movels
+# graphic-novels
 
 ## Project setup
 ```
