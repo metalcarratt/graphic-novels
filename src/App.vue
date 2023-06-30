@@ -10,6 +10,7 @@
 
 html, body {
   margin: 0;
+  height: 100%;
 }
 
 #app {
@@ -17,6 +18,7 @@ html, body {
   justify-content: center;
   background-color: #39261e;
   color: #efd4c9;
+  min-height: 100%;
 }
 
 .story {
@@ -35,6 +37,12 @@ h1 {
 p, a {
   font-size: 40px;
   font-family: 'Ysabeau Office', sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+  p {
+    margin: 20px;
+  }
 }
 
 a {
