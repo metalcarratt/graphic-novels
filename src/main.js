@@ -13,6 +13,9 @@ const routes = [
 ];
 
 const router = createRouter({
+    base: process.env.NODE_ENV === 'production'
+        ? '/graphic-novels/'
+        : '/',
     history: createWebHistory(),
     routes
 });
