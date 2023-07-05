@@ -57,5 +57,5 @@
     <p>
         "Mother...!"
     </p>
-    <a href="">Next Chapter</a>
+    <router-link to="/xingying/ch003">Next Chapter</router-link>
 </template>
