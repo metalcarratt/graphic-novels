@@ -1,9 +1,19 @@
 <template>
   <div class="story">
-    <router-view></router-view>
+    <IndexPage v-if="!pageDetails.novel" />
+    <TitlePage v-else-if="!pageDetails.chapter" :novel="pageDetails.novel" />
+    <ChapterPage v-else :novel="pageDetails.novel" :chapter="pageDetails.chapter" />
   </div>
 </template>
 
+<script setup>
+import IndexPage from '@/components/IndexPage.vue';
+import TitlePage from './components/TitlePage.vue';
+import ChapterPage from './components/ChapterPage.vue';
+import { parseQueryString } from './engine/queryParser';
+
+const pageDetails = parseQueryString();
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&family=Ysabeau+SC:wght@600&display=swap');
