@@ -12,7 +12,7 @@
 <script setup>
 import { defineProps } from 'vue';
 import { novelDetails } from '@/novels/list';
-
+import { pathRoot } from '@/engine/path';
 
 const props = defineProps(['novel', 'chapter']);
 
@@ -24,6 +24,6 @@ const chapterContents = novelDetails[props.novel].getChapter(props.chapter);
 
 const imgUrl = (part) => `./images/${chapterDetails.url}${part.i}`;
 
-const nextChapterUrl = () => `/?n=${props.novel}&ch=${Number(props.chapter) + 1}`;
+const nextChapterUrl = () => `${pathRoot()}?n=${props.novel}&ch=${Number(props.chapter) + 1}`;
 
 </script>

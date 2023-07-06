@@ -13,6 +13,7 @@
 <script setup>
 import { defineProps } from 'vue';
 import { novelDetails } from '@/novels/list';
+import { pathRoot } from '@/engine/path';
 
 const props = defineProps(['novel']);
 
@@ -22,6 +23,6 @@ const description = novelDetails[props.novel].description;
 
 const chapters = novelDetails[props.novel].chapters;
 
-const url = (chapterNumber) => `/?n=${props.novel}&ch=${chapterNumber}`;
+const url = (chapterNumber) => `${pathRoot()}?n=${props.novel}&ch=${chapterNumber}`;
 
 </script>

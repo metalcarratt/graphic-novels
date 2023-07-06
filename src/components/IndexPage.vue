@@ -11,10 +11,11 @@
 
 <script setup>
 import { novelList, novelDetails } from '@/novels/list';
+import { pathRoot } from '@/engine/path';
 
 const novels = novelList;
 
-const url = (novel) => `/?n=${novel}`;
+const url = (novel) => `${pathRoot()}?n=${novel}`;
 
 const title = (novel) => `Novel - ${novelDetails[novel].title}`;
 </script>
