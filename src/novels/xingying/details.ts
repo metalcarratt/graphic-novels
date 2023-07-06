@@ -1,8 +1,11 @@
-import { ChapterContentsT } from '../list';
+
+import { ChapterContentsT } from '@/engine/types';
 import ch001 from './ch001';
 import ch002 from './ch002';
 import ch003 from './ch003';
 import ch004 from './ch004';
+
+export const XINGYING = 'xingying';
 
 const chapters: Record<string, ChapterContentsT[]> = {
     '1': ch001,
