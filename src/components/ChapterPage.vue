@@ -1,5 +1,6 @@
 <template>
     <h1>{{ title }}</h1>
+    <a :href="indexUrl()">&lt; Back</a>
     <template v-for="(part, index) of chapterContents" :key="index">
         <p v-if="part.p">{{ part.p }}</p>
         <img v-if="part.i" :src="imgUrl(part)"/>
@@ -25,5 +26,7 @@ const chapterContents = novelDetails[props.novel].getChapter(props.chapter);
 const imgUrl = (part) => `./images/${chapterDetails.url}${part.i}`;
 
 const nextChapterUrl = () => `${pathRoot()}?n=${props.novel}&ch=${Number(props.chapter) + 1}`;
+
+const indexUrl = () => `${pathRoot()}?n=${props.novel}`;
 
 </script>

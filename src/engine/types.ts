@@ -1,7 +1,8 @@
 export type ChapterDetailsT = {
     index: number,
     title: string,
-    url: string
+    url: string,
+    bgColour?: string
 }
 
 export type ChapterContentsT = 
